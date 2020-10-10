@@ -1,0 +1,40 @@
+<!Doctype html>
+<html>
+<head>
+<title>select parishioner baptism, fhc and confirmation profile</title>
+<style>
+	input{
+		font-size: 1.2em;
+	}
+</style>
+</head>
+<body>
+<h1 style="width:100%;color:ghostwhite;background:linear-gradient(to right,#13547a 50%,#80d0c7 100%);font-family:helvetica;min-height:80px;min-width:300px;padding:10px 0 10px 20px;text-transform:uppercase">Select interface</h1><br>
+<br>
+
+SELECT BY:
+<input type="radio" name="radiobtn" id="baptismnameRadio" checked/><label for="baptismnameRadio">BAPTISM NAME</label>
+<input type="radio" name="radiobtn" id="fullnameRadio" style="margin-left:50px;"/><label for="fullnameRadio">FULL NAME</label></br></br>
+
+<div id="formDiv">
+<form action="viewprofile2.php" method="POST">
+Enter the Baptismal Name of the Parishioner:&nbsp;&nbsp;<input style="background:skyblue;text-transform:uppercase;" type="text" size="50" name="baptismname"><input placeholder="baptismnumber" style="background:skyblue;text-transform:uppercase;margin-left:30px" type="text" name="baptismnumber"/><input type="submit" formtarget="_blank" value="Submit" name="submit"/>
+</form>
+</div><br><br>
+<a href="baptism_homepage.html"><button style="width:60px;height:30px;cursor:pointer">Home</button></a>
+
+<script>
+	var formDiv= document.getElementById("formDiv");
+	var baptismRadioBtn= document.getElementById("baptismnameRadio");
+	var fullnameRadioBtn= document.getElementById("fullnameRadio");
+
+	baptismRadioBtn.onclick= function(){
+		formDiv.innerHTML= '<form action="viewprofile2.php" method="POST">Enter the Baptismal Name of the Parishioner:&nbsp;&nbsp;<input style="background:skyblue;text-transform:uppercase;" type="text" size="50" name="baptismname"><input placeholder="baptismnumber" style="background:skyblue;text-transform:uppercase;margin-left:30px" type="text" name="baptismnumber"/><input type="submit" formtarget="_blank" value="Submit" name="submit"/></form>';
+	};
+
+	fullnameRadioBtn.onclick= function(){
+		formDiv.innerHTML= '<form action="viewprofile_baptismselect.php" method="POST">Enter the Full Name of the Parishioner:&nbsp;&nbsp;<input style="background:skyblue;text-transform:uppercase;" type="text" size="50" name="fullname"><input placeholder="baptismnumber" style="background:skyblue;text-transform:uppercase;margin-left:30px" type="text" name="baptismnumber"/><input type="submit" formtarget="_blank" value="Submit" name="submit"/></form>';
+	};
+</script>
+</body>
+</html>

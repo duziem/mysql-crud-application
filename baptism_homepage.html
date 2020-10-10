@@ -1,0 +1,59 @@
+<!Doctype html>
+<html>
+<head>
+	<title>ST.Anthony's Baptised Parishioners Database</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<style>
+		*{
+			margin:0;
+			padding:0;
+		}
+		#container{
+			display:flex;
+			padding:50px 0 0 50px;
+			/*flex-direction:column;*/
+			background:linear-gradient(to right,#09203f 50%,#537895 100%);
+			height:auto;
+			min-height:606px;
+		}
+
+		.menuoption {
+			display: flex;
+			text-decoration:none;
+			color:ghostwhite;
+			font:23px bold helvetica;
+			width:100%;
+			text-align:center;
+			min-height:100px;
+			align-items:center;
+			justify-content:center;
+		}
+		.menuoption:hover{
+			background:linear-gradient(to right,#868f96 50%,#596164 100%);
+		}
+		#menuBox{
+			display:flex;
+			flex-direction:column;
+			background:linear-gradient(to right,#09203f 50%,#537895 100%);
+			width:400px;
+			height:500px;
+		}
+		#menuBox a{
+			text-decoration: none;
+		}
+	</style>
+</head>
+<body>
+	<div id="container">
+		<div id="menuBox">
+			<a href="baptism_insert.php"><div class="menuoption">Baptism New Entry</div></a>
+			<a href="selectform1.html"><div class="menuoption">Preview Baptism Report</div></a>
+			<a href="baptism_update.php"><div class="menuoption">Update A Record</div></a><br><br>
+		</div>
+		<div><img src="stanthony.jpg" width="auto" height="500px"></div>
+		<!--
+		<span style="clear:left;margin-left:auto;font-family:helvetica;color:lavender">Directed By Francis <br>Property of St.Anthony's Catholic Church<br>Gbaja Surulere, Lagos<br>@Copyright 2019<span>-->
+	</div>
+</body>
+</html>
